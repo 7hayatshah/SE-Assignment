@@ -13,4 +13,10 @@ public class Function extends Random {
             System.out.println("Number not found!");
         }
     }
+    
+    //Method to generate random numbers
+    void generate(int Array[]){
+        for(int i=0; i<Array.length; i++)
+        Array[i] = nextInt(24) + 1;
+    }
 }
