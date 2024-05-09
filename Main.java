@@ -1,28 +1,25 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class ArrayFunctions{
+public class Main{
     public static void main(String[] args) {
-        //scanner class
+        //Creating Objects
 		Scanner ob=new Scanner(System.in);
-		int  a=0;
-		do{
-					//Creating An Array and input number
+		Function fs = new Function();
+
+			//Creating An Array and input number
 			System.out.println("Enter 10 num");
 			int num[]=new int[10];
 			for(int i=0; i<10; i++){
 				num[i]=ob.nextInt();
 				}
-					//Taking selection
-			System.out.println("selection \n 1.Travrse Array \n 2.search no.");
-			int sel=ob.nextInt();
-					//used switch to add multiple slection
-			a=sel;
-			switch(sel){
+
+			//Using switch to let user choose what he wants to do!
+			switch(ob.nextInt()){
 				case 1: 
-					// Read/Travrse/ output value
+				//Display Array Contents
 				for(int j=0; j<10; j++)
 				System.out.println(num[j]);
-			break;
+				break;
 					//searching
 			case 2: 
 			System.out.println("Enter num");
@@ -36,6 +33,5 @@ public class ArrayFunctions{
 			}
 			break;
 			}
-		}while(a>=1 && a<=3);
 	}
 }
