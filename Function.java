@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 public class Function extends Random {
 
@@ -18,5 +18,18 @@ public class Function extends Random {
     void generate(int Array[]){
         for(int i=0; i<Array.length; i++)
         Array[i] = nextInt(24) + 1;
+    }
+
+        //Bubble Sort
+    void sort(int Array[]){
+        for(int i= Array.length-1; i>=1; i--){
+            for(int j=0; j<i; j++){
+                if(Array[j]>Array[j+1]){
+                int temp = Array[j+1];
+                    Array[j+1] = Array[j];
+                    Array[j] = temp;
+                }
+            }
+        }
     }
 }

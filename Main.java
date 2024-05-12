@@ -15,7 +15,7 @@ public class Main{
 		while(a){
 		//Using switch to let user choose what he wants to do!
 		System.out.println("- Press the number related to your desired function!");
-		System.out.println("Display: 1 \nSearch:  2 ");
+		System.out.println("Display: 1 \nSearch:  2 \nSort: 3");
 		switch(ob.nextInt()){
 			
 		case 1:
@@ -29,6 +29,11 @@ public class Main{
 		System.out.println("Insert the number you want to search");
 		fs.search(ob.nextInt(), num);
 		break;
+		
+		case 3:
+		// sorting
+		System.out.println("Sorting");
+		fs.sort(num);
 		}
 
 		//Taking user input to see if he wants to continue
