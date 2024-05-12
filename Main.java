@@ -9,17 +9,18 @@ public class Main{
 		//Creating An Array and filling it with random numbers!
 		int[] num = new int[10];
 		fs.generate(num);
-		System.out.println("- Array filled Random Numbers between 1 to 25!");
+		System.out.println("Array filled random Numbers between 1 to 25!");
 
 		boolean a = true;
 		while(a){
 		//Using switch to let user choose what he wants to do!
-		System.out.println("- Press the number related to your desired function!");
-		System.out.println("Display: 1 \nSearch:  2 \nSort: 3");
+		System.out.println("Press the number related to your desired function!");
+		System.out.println("Display: 1 \nSearch:  2 \nSort:    3 \nInsert:  4");
 		switch(ob.nextInt()){
 			
 		case 1:
 		//Display Array Contents
+		System.out.println("Array Contents:");
 		for(int i=0; i<10; i++)
 		System.out.println(num[i]);
 		break;
@@ -31,15 +32,25 @@ public class Main{
 		break;
 		
 		case 3:
-		// sorting
-		System.out.println("Sorting");
+		//Sorting
+		System.out.println("Array Succesfully Sorted!");
 		fs.sort(num);
+		break;
+
+		case 4:
+		//Insertion
+		System.out.println("Insert the number:");
+		fs.insert(ob.nextInt(), num);
+		break;
+
+		default:
+		System.out.println("Invalid!");
 		}
 
 		//Taking user input to see if he wants to continue
-		System.out.println("\nPress '0' if you want to exit or other number if you want to continue...");
+		System.out.println("\nPress '0' for exit or 'other number' if you want to continue...");
 		if(ob.nextInt()==0)
-			break;
+		break;
 	}
 }
 }

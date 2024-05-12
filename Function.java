@@ -20,7 +20,7 @@ public class Function extends Random {
         Array[i] = nextInt(24) + 1;
     }
 
-        //Bubble Sort
+    //Bubble Sort
     void sort(int Array[]){
         for(int i= Array.length-1; i>=1; i--){
             for(int j=0; j<i; j++){
@@ -32,4 +32,12 @@ public class Function extends Random {
             }
         }
     }
+
+    //Array Insertion
+    void insert(int x, int Array[]){
+        for(int i=Array.length-1; i>=1; i--){
+            Array[i] = Array[i-1];
+        }
+        Array[0] = x;
+}
 }
