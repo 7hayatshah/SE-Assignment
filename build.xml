@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ArrayOperations" default="compile" basedir=".">
-    
-    <!-- Define Properties -->
+<project name="MyProject" default="jar" basedir=".">
+
+    <!-- Declaring Properties -->
+    <property name="src.dir" value="src"/>
     <property name="build.dir" value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
-    <property name="jar.file" value="${build.dir}/ArrayOperations.jar"/>
+    <property name="jar.file" value="${build.dir}/MyProject.jar"/>
 
-    <!-- Clean up -->
+    <!-- Clean up previous build -->
     <target name="clean">
         <delete dir="${build.dir}"/>
     </target>
 
-    <!-- Create directories -->
+    <!-- Create necessary directories -->
     <target name="prepare">
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${classes.dir}"/>
@@ -19,7 +20,7 @@
 
     <!-- Compile source files -->
     <target name="compile" depends="clean, prepare">
-        <javac srcdir="." destdir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
     </target>
 
     <!-- Create JAR file -->
