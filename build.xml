@@ -2,7 +2,6 @@
 <project name="ArrayOperations" default="compile" basedir=".">
     
     <!-- Define Properties -->
-    <property name="src.dir" value="src"/>
     <property name="build.dir" value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.file" value="${build.dir}/ArrayOperations.jar"/>
@@ -20,7 +19,7 @@
 
     <!-- Compile source files -->
     <target name="compile" depends="clean, prepare">
-        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+        <javac srcdir="." destdir="${classes.dir}"/>
     </target>
 
     <!-- Create JAR file -->
