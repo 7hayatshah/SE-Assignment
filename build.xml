@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="MyProject" default="jar" basedir=".">
+<project name="MyProject" default="run" basedir=".">
 
     <!-- Declaring Properties -->
     <property name="src.dir" value="src"/>
